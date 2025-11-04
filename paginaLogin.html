@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - ONG Turma do Bem</title>
+
+  <!-- Mesmo CSS da home -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="IMAGEM/LOGOTDB.png" type="image/png"/>
+</head>
+
+<body class="login">
+  <div class="wrapper">
+
+    <!-- HEADER igual ao index -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="IMAGEM/LOGOTDB.png" alt="Logo ONG Turma do Bem"/>
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">☰</button>
+
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="integrante.html">Integrantes</a></li>
+        </ul>
+      </nav>
+
+      <div class="auth">
+        <img src="imagem/icone login.png" alt="Ícone de login" class="auth__icon"/>
+        <a class="active" href="paginaLogin.html">Entre ou <br> Cadastre-se</a>
+      </div>
+    </header>
+
+    <!-- CONTEÚDO DE LOGIN -->
+    <main class="login-container">
+        <div class="login-card">
+      <div class="login-verde">
+        <img src="imagem/logo_vision.png" alt="Logo Vision" class="logo-img">
+      </div>
+      <div class="login-branco">
+        <h2 class="bem-vindo">Bem vindo!</h2>
+        <form class="form" action="#" method="post">
+          <label for="email">seu e-mail</label>
+          <input id="email" type="email" name="email" placeholder="seu@email.com.br" required />
+
+          <label for="senha">sua senha</label>
+          <input id="senha" type="password" name="senha" placeholder="sua senha" required />
+
+          <button type="submit" class="btn-primary">
+            <span class="arrow">➜</span>
+            Acessar
+          </button>
+        </form>
+
+        <p class="signup-hint">
+          Não tem uma conta ainda? <a href="paginaCadastro.html">Clique aqui.</a>
+        </p>
+        
+    </main>
+
+    <!-- FOOTER igual ao index -->
+    <footer class="rodape">
+      <div class="rodape-esquerda">
+        <img src="IMAGEM/logo-turma-do-bem-branca.png" alt="Logo branco Turma do Bem"/>
+        <p>Você pode ser o melhor dentista do mundo</p>
+      </div>
+
+      <div class="container-rodape-meio">
+        <a href="https://www.facebook.com/turmadobem/?locale=pt_BR"><img src="IMAGEM/logo-facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/ongturmadobem/"><img src="IMAGEM/logo-instagram.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/company/turma-do-bem?originalSubdomain=br"><img src="IMAGEM/logo_linkedin (2).png" alt="LinkedIn"></a>
+        <a href="https://x.com/turmadobem"><img src="IMAGEM/logo-twitter.png" alt="Twitter"></a>
+      </div>
+
+      <div class="rodape-direita">
+        <a href="paginaLogin.html" class="btn-rodape">Quero fazer parte</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Mesmo JavaScript -->
+  <script src="javascript/script.js"></script>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script> new window.VLibras.Widget('https://vlibras.gov.br/app'); </script>
+</body>
+</html>

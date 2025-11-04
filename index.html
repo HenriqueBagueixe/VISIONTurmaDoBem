@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ONG Turma do Bem</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="IMAGEM/LOGOTDB.png" type="image/png"/>
+</head>
+
+<body class="home">
+  <div class="wrapper">
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="IMAGEM/LOGOTDB.png" alt="Logo ONG Turma do Bem"/>
+        </a>
+      </div>
+
+      <!-- Botão Hamburguer -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">☰</button>
+
+      <!-- Menu -->
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a class="active" href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="integrante.html">Integrantes</a></li>
+        </ul>
+      </nav>
+
+      <!-- Login -->
+      <div class="auth">
+        <img src="IMAGEM/icone login.png" alt="Ícone de login" class="auth__icon"/>
+        <a class="active" href="paginaLogin.html">Entre ou <br> Cadastre-se</a>
+      </div>
+    </header>
+
+    <!-- ================= BANNER ================= -->
+    <section class="banner">
+      <img class="banner-bg" src="imagem/Header.png" alt="Robô apresentando o comando de voz"/>
+
+      <div class="banner-container">
+        <div class="banner-grid">
+          <div class="banner-text">
+            <h2>Precisa de ajuda?</h2>
+            <h1>Faça seu cadastro via<br><strong>Comando de voz</strong></h1>
+            <a href="paginaLogin.html" class="clique-aqui">Clique aqui</a>
+          </div>
+          <div class="banner-spacer" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SOBRE ================= -->
+    <section class="sobre" id="sobre">
+      <div class="sobre-texto">
+        <p>
+          A <strong>Turma do Bem</strong> gerencia a maior rede de voluntariado
+          especializado do mundo, contando com mais de <strong>18 mil dentistas</strong>
+          atuando em <strong>12 países</strong>.
+        </p>
+        <a href="paginaLogin.html" class="btn-fazer-parte">Quero fazer parte</a>
+      </div>
+
+      <div class="sobre-video">
+        <iframe src="https://www.youtube.com/embed/_a-sIYa3YF8"
+          title="Vídeo institucional Turma do Bem" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- ================= NÚMEROS ================= -->
+    <section class="numeros">
+      <h2>
+        Turma do Bem
+        <span>em números</span>
+      </h2>
+      <div class="numeros-cards">
+        <div>
+          <img src="IMAGEM/ICONE_AMARELO_JOVENS.png" alt="Jovens atendidos"/>
+          <p class="card1"><strong>+82 mil</strong></p>
+          <p>Jovens atendidos</p>
+        </div>
+        <div>
+          <img src="IMAGEM/ICONE_LARANJA_MULHER.png" alt="Mulheres atendidas"/>
+          <p class="card1"><strong>+1,1 mil</strong></p>
+          <p>Mulheres atendidas</p>
+        </div>
+        <div>
+          <img src="IMAGEM/ICONE_AMARELO_DENTISTA_VOLUNTARIO.png" alt="Dentistas voluntários"/>
+          <p class="card1"><strong>+18 mil</strong></p>
+          <p>Dentistas voluntários</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DEPOIMENTO ================= -->
+    <section class="depoimento">
+      <div class="depoimento-wrap">
+        <div class="avatar-circulo">
+          <img src="IMAGEM/relisiane-beneficiaria-turma-do-bem.jpg"
+               alt="Reislaine Rodrigues, beneficiária da Turma do Bem"/>
+        </div>
+
+        <div class="depoimento-bubble">
+          <p>Eu tinha muita vergonha de sorrir, me sentia toda feia e sonhava com um
+            aparelho para corrigir os dentes. Conforme as cáries sumiam e os dentes
+            se endireitavam, eu me tornava cada vez mais confiante. A aparência conta
+            sim, e muito, porque precisamos da autoestima para ir atrás do que queremos.</p>
+          <h3>Reislaine Rodrigues, <span>beneficiária da Turma do Bem</span></h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RODAPÉ ================= -->
+    <footer class="rodape">
+      <div class="rodape-esquerda">
+        <img src="IMAGEM/logo-turma-do-bem-branca.png" alt="Logo branco Turma do Bem"/>
+        <p>Você pode ser o melhor dentista do mundo</p>
+      </div>
+
+      <div class="container-rodape-meio">
+        <a href="https://www.facebook.com/turmadobem/?locale=pt_BR"><img src="IMAGEM/logo-facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/ongturmadobem/"><img src="IMAGEM/logo-instagram.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/company/turma-do-bem?originalSubdomain=br"><img src="IMAGEM/logo_linkedin (2).png" alt="LinkedIn"></a>
+        <a href="https://x.com/turmadobem"><img src="IMAGEM/logo-twitter.png" alt="Twitter"></a>
+      </div>
+
+      <div class="rodape-direita">
+        <a href="paginaLogin.html" class="btn-rodape">Quero fazer parte</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ================= SCRIPT PRINCIPAL ================= -->
+  <script src="javascript/script.js"></script>
+
+  <!-- ================= VLibras ================= -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script> new window.VLibras.Widget('https://vlibras.gov.br/app'); </script>
+</body>
+</html>

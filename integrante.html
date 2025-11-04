@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integrantes - Turma do Bem</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Ícone da aba -->
+  <link rel="icon" href="IMAGEM/LOGOTDB.png" type="image/png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="IMAGEM/LOGOTDB.png" alt="Logo ONG Turma do Bem" />
+        </a>
+      </div>
+
+      <!-- Botão Hamburguer -->
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Abrir menu"
+        aria-controls="menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <!-- Menu -->
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="integrante.html" class="active">Integrantes</a></li>
+        </ul>
+      </nav>
+
+      <!-- Login -->
+      <div class="auth">
+        <img src="IMAGEM/icone login.png" alt="Ícone de login" class="auth__icon" />
+        <a class="active" href="paginaLogin.html">Entre ou <br> Cadastre-se</a>
+      </div>
+    </header>
+
+    <!-- ================= BANNER ================= -->
+    <section class="banner">
+      <img src="IMAGEM/header-integrantes.png" alt="Imagem com a logo da Vision - Integrantes" />
+    </section>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main>
+      <section class="quem-somos">
+        <h2><strong>Quem somos</strong></h2>
+      </section>
+
+      <section class="integrantes">
+        <div class="integrante">
+          <img src="IMAGEM/imagem-integrante-denise.jpeg" alt="Foto de Denise Santos" />
+          <h3>DENISE SANTOS</h3>
+          <p><strong>RM:</strong> 567559</p>
+          <p><strong>Turma:</strong> 1TDSPA</p>
+          <p class="links">
+            <a href="https://github.com/Denise-ss" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com/in/XXXX" target="_blank">LinkedIn</a>
+          </p>
+        </div>
+
+        <div class="integrante">
+          <img src="IMAGEM/imagem-integrante-henrique.jpeg" alt="Foto de Henrique Bagueixe" />
+          <h3>HENRIQUE BAGUEIXE</h3>
+          <p><strong>RM:</strong> 568292</p>
+          <p><strong>Turma:</strong> 1TDSPA</p>
+          <p class="links">
+            <a href="https://github.com/HenriqueBagueixe" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/henrique-bagueixe" target="_blank">LinkedIn</a>
+          </p>
+        </div>
+
+        <div class="integrante">
+          <img src="IMAGEM/imagem-integrante-karen.jpeg" alt="Foto de Karen Cardoso" />
+          <h3>KAREN CARDOSO</h3>
+          <p><strong>RM:</strong> 566870</p>
+          <p><strong>Turma:</strong> 1TDSPA</p>
+          <p class="links">
+            <a href="https://github.com/karenlldl" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/karenlldlira/" target="_blank">LinkedIn</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= RODAPÉ ================= -->
+    <footer class="rodape">
+      <div class="rodape-esquerda">
+        <img src="IMAGEM/logo-turma-do-bem-branca.png" alt="Logo branco Turma do Bem" />
+        <p>Você pode ser o melhor dentista do mundo</p>
+      </div>
+
+      <div class="container-rodape-meio">
+        <a href="https://www.facebook.com/turmadobem/?locale=pt_BR"><img src="IMAGEM/logo-facebook.png" alt="Facebook" /></a>
+        <a href="https://www.instagram.com/ongturmadobem/"><img src="IMAGEM/logo-instagram.png" alt="Instagram" /></a>
+        <a href="https://www.linkedin.com/company/turma-do-bem?originalSubdomain=br"><img src="IMAGEM/logo_linkedin (2).png" alt="LinkedIn" /></a>
+        <a href="https://x.com/turmadobem"><img src="IMAGEM/logo-twitter.png" alt="Twitter" /></a>
+      </div>
+
+      <div class="rodape-direita">
+        <a href="paginaLogin.html" class="btn-rodape">Quero fazer parte</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ================= SCRIPT PRINCIPAL ================= -->
+  <script src="javascript/script.js"></script>
+
+  <!-- ================= VLibras (Gratuito e Oficial) ================= -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Turma do Bem</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Ícone da aba -->
+  <link rel="icon" href="IMAGEM/LOGOTDB.png" type="image/png">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="IMAGEM/LOGOTDB.png" alt="Logo Turma do Bem">
+        </a>
+      </div>
+
+      <!-- Botão Hamburguer -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <!-- Menu -->
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html" class="active">Contato</a></li>
+          <li><a href="integrante.html">Integrantes</a></li>
+        </ul>
+      </nav>
+
+      <!-- Área de login -->
+      <div class="auth">
+        <img src="IMAGEM/icone login.png" alt="Ícone de login" class="auth__icon">
+        <a class="active" href="paginaLogin.html">Entre ou <br> Cadastre-se</a>
+      </div>
+    </header>
+
+    <!-- ================= BANNER ================= -->
+    <section class="banner">
+      <img src="IMAGEM/foto_contato.png" alt="Imagem ilustrativa da página de contato">
+    </section>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main>
+      <section class="formulario-contato">
+        <h1 class="titulo-contato">Fale Conosco</h1>
+        <h2>Envie sua mensagem</h2>
+
+        <form action="mailto:contato@meuprojeto.com" method="POST" enctype="text/plain">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="assunto">Assunto:</label>
+          <input type="text" id="assunto" name="assunto" required>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <!-- ================= MAPA ================= -->
+      <section class="localizacao">
+        <div class="localizacao-conteudo">
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.682438828481!2d-46.63731352477059!3d-23.578938478783777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c35d7aa63d%3A0x41c9e0e14db5b4f8!2sR.%20Maur%C3%ADcio%20Francisco%20Klabin%2C%20449%20-%20Vila%20Mariana%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004120-020!5e0!3m2!1spt-BR!2sbr!4v1697733123456"
+              width="500"
+              height="350"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy">
+            </iframe>
+          </div>
+
+          <div class="endereco">
+            <h2>Endereço Turma do Bem</h2>
+            <p>
+              Rua Maurício Francisco Klabin, 449<br>
+              Vila Mariana, São Paulo - SP<br>
+              CEP 04120-020
+            </p>
+            <p><strong>Telefone:</strong> (11) 5084-7276</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= RODAPÉ ================= -->
+    <footer class="rodape">
+      <div class="rodape-esquerda">
+        <img src="IMAGEM/logo-turma-do-bem-branca.png" alt="Logo branco Turma do Bem">
+        <p>Você pode ser o melhor dentista do mundo</p>
+      </div>
+
+      <div class="container-rodape-meio">
+        <a href="https://www.facebook.com/turmadobem/?locale=pt_BR"><img src="IMAGEM/logo-facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/ongturmadobem/"><img src="IMAGEM/logo-instagram.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/company/turma-do-bem?originalSubdomain=br"><img src="IMAGEM/logo_linkedin (2).png" alt="LinkedIn"></a>
+        <a href="https://x.com/turmadobem"><img src="IMAGEM/logo-twitter.png" alt="Twitter"></a>
+      </div>
+
+      <div class="rodape-direita">
+        <a href="paginaLogin.html" class="btn-rodape">Quero fazer parte</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ================= SCRIPT PRINCIPAL ================= -->
+  <script src="javascript/script.js"></script>
+
+  <!-- ================= VLibras (Gratuito e Oficial) ================= -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+</html>

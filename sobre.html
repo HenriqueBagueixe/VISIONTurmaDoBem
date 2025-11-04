@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre o Projeto - Turma do Bem</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Ícone da aba -->
+  <link rel="icon" href="IMAGEM/LOGOTDB.png" type="image/png" />
+</head>
+
+<body class="sobre-page">
+  <div class="wrapper">
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="IMAGEM/LOGOTDB.png" alt="Logo ONG Turma do Bem" />
+        </a>
+      </div>
+
+      <!-- Botão Hamburguer -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <!-- Menu -->
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#" class="active">Sobre</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="integrante.html">Integrantes</a></li>
+        </ul>
+      </nav>
+
+      <!-- Login -->
+      <div class="auth">
+        <img src="IMAGEM/icone login.png" alt="Ícone de login" class="auth__icon" />
+        <a class="active" href="paginaLogin.html">Entre ou <br> Cadastre-se</a>
+      </div>
+    </header>
+
+    <!-- ================= BANNER ================= -->
+    <section class="banner-sobre">
+      <img src="IMAGEM/foto_sobre (1).png" alt="Imagem em preto e branco representando o projeto Vision" />
+    </section>
+
+    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+    <main class="conteudo-sobre">
+      <div class="texto-sobre">
+        <p>
+          A <strong>Vision</strong> é uma empresa criada para transformar a forma como a 
+          <strong>Turma do Bem</strong> conecta pessoas, voluntários e beneficiários. 
+          O projeto nasceu a partir do <strong>Challenge FIAP 2025</strong>, com o propósito de unir 
+          <strong>tecnologia, empatia e impacto social</strong>.
+        </p>
+
+        <p>
+          A plataforma propõe um <strong>sistema integrado de gestão e atendimento</strong>, 
+          com recursos como <strong>chatbot por comando de voz</strong>, 
+          <strong>geolocalização</strong> e <strong>priorização automática de casos por score</strong>, 
+          garantindo <strong>agilidade</strong> e <strong>transparência</strong> em cada etapa do processo.
+        </p>
+
+        <p>
+          Desenvolvido com <strong>Python</strong>, <strong>HTML</strong>, <strong>CSS</strong> e 
+          <strong>APIs do Google Maps</strong>, o projeto segue um <strong>roadmap</strong> que abrange 
+          planejamento, desenvolvimento, integração, testes e implementação — sempre com foco em 
+          <strong>acessibilidade</strong>, <strong>inclusão</strong> e <strong>eficiência</strong>.
+        </p>
+
+        <p class="destaque">
+          Acreditamos que a tecnologia deve ser usada para 
+          <strong>aproximar pessoas e multiplicar o bem</strong>.
+        </p>
+      </div>
+
+      <div class="logo-vision">
+        <img src="IMAGEM/logo_vision.png" alt="Logo Vision Technology" />
+      </div>
+
+      <section class="roadmap">
+        <img src="IMAGEM/roadmap.png" alt="Roadmap geral do projeto Vision" />
+      </section>
+    </main>
+
+    <!-- ================= RODAPÉ ================= -->
+    <footer class="rodape">
+      <div class="rodape-esquerda">
+        <img src="IMAGEM/logo-turma-do-bem-branca.png" alt="Logo branco Turma do Bem" />
+        <p>Você pode ser o melhor dentista do mundo</p>
+      </div>
+
+      <div class="container-rodape-meio">
+        <a href="https://www.facebook.com/turmadobem/?locale=pt_BR"><img src="IMAGEM/logo-facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/ongturmadobem/"><img src="IMAGEM/logo-instagram.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/company/turma-do-bem?originalSubdomain=br"><img src="IMAGEM/logo_linkedin (2).png" alt="LinkedIn"></a>
+        <a href="https://x.com/turmadobem"><img src="IMAGEM/logo-twitter.png" alt="Twitter"></a>
+      </div>
+
+      <div class="rodape-direita">
+        <a href="paginaLogin.html" class="btn-rodape">Quero fazer parte</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ================= SCRIPT PRINCIPAL ================= -->
+  <script src="javascript/script.js"></script>
+
+  <!-- ================= VLibras ================= -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script> new window.VLibras.Widget('https://vlibras.gov.br/app'); </script>
+</body>
+</html>
