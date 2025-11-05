@@ -313,3 +313,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// =======CADASTRO=======//
+(function () {
+      const selectTipo = document.getElementById('tipo');
+      const blocks = document.querySelectorAll('[data-show-for]');
+
+      function toggleByTipo() {
+        const tipo = selectTipo.value;
+
+        blocks.forEach(block => {
+          const targets = block.dataset.showFor.split(',').map(s => s.trim());
+          const show = targets.includes(tipo);
+
+          // mostra/esconde bloco
+          block.classList.toggle('hidden', !show);
+
+          // liga/desliga required dos inputs internos
+          block.querySelectorAll('input, select, textarea').forEach(input => {
+            if (show) {
+              if (input.dataset.wasRequired === 'true') {
+                input.required = true;
+                delete input.dataset.wasRequired;
+              }
+            } else {
+              if (input.required) {
+                input.dataset.wasRequired = 'true';
+                input.required = false;
+              }
+              // limpa valor quando oculta
+              if (input.tagName === 'SELECT') {
+                input.selectedIndex = 0;
+              } else {
+                input.value = '';
+              }
+            }
+          });
+        });
+      }
+
+      selectTipo.addEventListener('change', toggleByTipo);
+      document.addEventListener('DOMContentLoaded', toggleByTipo);
+      toggleByTipo(); // executa logo ao carregar
+    })();
