@@ -147,17 +147,24 @@ document.addEventListener("DOMContentLoaded", () => {
 //   PAGINA DE BENEFICIARIO 
 // =======================================================
 
-const menuBtn = document.getElementById('benefMenuToggle');
-const menu = document.getElementById('benefMenu');
+const benefMenuBtn = document.getElementById('benefMenuToggle');
+const benefMenu = document.getElementById('benefMenu');
+if (benefMenuBtn && benefMenu) {
+  benefMenuBtn.addEventListener('click', () => {
+    benefMenu.classList.toggle('abrir');
+  });
+}
 
-menuBtn.addEventListener('click', () => {
-  menu.classList.toggle('abrir');
-});
-
-// ======== BOTÃO SAIR ========
-document.getElementById('logoutBtn').addEventListener('click', () => {
-  alert('Você saiu da sua conta!');
-  window.location.href = 'index.html';
+// ======== BOTÃO SAIR (funciona em todas as páginas) ========
+document.addEventListener('DOMContentLoaded', () => {
+  // pega tanto pelo id quanto pela classe que você usa no HTML
+  const logoutButtons = document.querySelectorAll('#logoutBtn, .benef-logout-btn');
+  logoutButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      alert('Saindo da conta...');
+      window.location.href = 'index.html'; // ajuste se sua página inicial tiver outro nome
+    });
+  });
 });
 
 // ======== CONSULTAS ========
@@ -168,35 +175,26 @@ const consultas = [
 ];
 
 const container = document.getElementById('consultas-container');
-consultas.forEach(c => {
-  const card = document.createElement('div');
-  card.classList.add('benef-consulta-card');
-  card.innerHTML = `
-    <div class="consulta-info">
-      <i>🦷</i>
-      <div><strong>Procedimento:</strong> ${c.procedimento}</div>
-    </div>
-    <div class="consulta-data">${c.data} às ${c.hora}</div>
-  `;
-  container.appendChild(card);
-});
+if (container) {
+  consultas.forEach(c => {
+    const card = document.createElement('div');
+    card.classList.add('benef-consulta-card');
+    card.innerHTML = `
+      <div class="consulta-info">
+        <i>🦷</i>
+        <div><strong>Procedimento:</strong> ${c.procedimento}</div>
+      </div>
+      <div class="consulta-data">${c.data} às ${c.hora}</div>
+    `;
+    container.appendChild(card);
+  });
+}
 // =======================================================
 //   PAINÉL DO DENTISTA — FUNCIONALIDADES UNIFICADAS
 // =======================================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  // ====================== BOTÃO SAIR ======================
-  const logoutBtn = document.getElementById("dentLogoutBtn");
-
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      showToast("Você saiu da sua conta, Dr. João!");
-      localStorage.clear();
-      setTimeout(() => window.location.href = "paginaLogin.html", 2200);
-    });
-  }
 
   // ====================== HISTÓRICO — REGISTRO DE PROCEDIMENTOS ======================
   const form = document.querySelector(".hist-form");

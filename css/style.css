@@ -874,7 +874,7 @@ input:focus{
   border-bottom-color: var(--accent);
 }
 
-.btn-primary{
+.btn-primeiro{
   margin-top: 8px;
   border: none;
   background: var(--accent);
@@ -889,9 +889,10 @@ input:focus{
   align-items: center;
   gap: 10px;
   transition: transform .04s ease, filter .2s ease;
+  text-decoration: none;
 }
 
-.btn-primary:hover{
+.btn-primeiro:hover{
   filter: brightness(1.02);
 }
 
@@ -928,7 +929,7 @@ input:focus{
     background: linear-gradient(180deg, var(--lime-700) 0 40%, #fff 40% 100%);
     padding: 16px;
   }
-  .btn-primary{
+  .btn-primeiro{
     width: 100%;
     justify-content: center;
   }
@@ -1176,11 +1177,11 @@ input:focus{
 ======================================================= */
 .benef-menu {
   position: fixed;
-  top: 70px;
+  top: 84px;
   left: 0;
   width: 220px;
   height: calc(100vh - 70px);
-  background-color: #b8d40d;
+  background-color: #BABF34;
   color: white;
   display: flex;
   flex-direction: column;
@@ -1206,7 +1207,7 @@ input:focus{
 }
 
 .benef-menu a:hover {
-  background-color: #9dbf1a;
+  background-color: #d5da5b;
 }
 
 /* Botão hamburguer */
@@ -1409,6 +1410,7 @@ input:focus{
   align-items: center;
   padding-top: 30px;
   box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+
 }
 
 .dent-menu-logo, .pac-menu-logo, .hist-menu-logo {
@@ -1433,7 +1435,7 @@ input:focus{
 .dent-menu a.active,
 .pac-menu a.active,
 .hist-menu a.active {
-  background-color: #9dbf1a;
+  background-color: #d5da5b;
 }
 
 /* ======== conteúdo ======== */
