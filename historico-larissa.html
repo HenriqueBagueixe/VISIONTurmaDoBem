@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Histórico da Paciente - Larissa Silva</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="IMAGEM/LOGOTDB.png" type="image/png" />
+</head>
+
+<body class="hist-wrapper">
+  <header class="hist-header">
+    <div class="hist-logo">
+      <img src="IMAGEM/logo-turma-do-bem-branca.png" alt="Logo Turma do Bem">
+    </div>
+    <div class="hist-user">
+      <p>Dr. João Carlos</p>
+    </div>
+  </header>
+
+  <aside class="hist-menu">
+    <img src="IMAGEm/logo_vision.png" alt="Logo Vision" class="hist-menu-logo" />
+    <nav>
+      <ul>
+        <li><a href="dentista.html">Início</a></li>
+        <li><a href="dentista-paciente.html" class="active">Pacientes</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="hist-content">
+    <section class="hist-dados">
+      <img src="IMAGEm/foto_larissa.jpeg" alt="Foto de Larissa Silva" class="hist-foto" />
+      <div class="hist-info">
+        <h2>Dados da Paciente</h2>
+        <p><b>Nome:</b> Larissa Silva</p>
+        <p><b>CPF:</b> 123.456.789-00</p>
+        <p><b>Telefone:</b> (11) 98888-5555</p>
+        <p><b>Endereço:</b> Rua das Flores, 120 - São Paulo</p>
+        <p><b>Projeto Social:</b> Dentista do Bem</p>
+      </div>
+    </section>
+
+    <section class="hist-atendimentos">
+      <h2>Histórico de Atendimentos</h2>
+      <div class="hist-cards">
+        <div class="hist-card">
+          <p><b>Data:</b> 05/09/2025</p>
+          <p><b>Procedimento:</b> Limpeza</p>
+          <p><b>Status:</b> Concluído</p>
+        </div>
+        <div class="hist-card">
+          <p><b>Data:</b> 18/10/2025</p>
+          <p><b>Procedimento:</b> Restauração</p>
+          <p><b>Status:</b> Concluído</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="hist-arcada">
+      <h2>Registrar Procedimentos</h2>
+      <img src="IMAGEm/arcada_dentaria.png" alt="Arcada dentária" class="hist-arcada-img" />
+
+      <form class="hist-form">
+        <div class="hist-row">
+          <label for="numeroDente">Número do Dente</label>
+          <select id="numeroDente" name="numeroDente" required>
+            <option value="">-- Escolha o dente --</option>
+            <optgroup label="Superiores">
+              <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option>
+            </optgroup>
+            <optgroup label="Inferiores">
+              <option>41</option><option>42</option><option>43</option><option>44</option><option>45</option><option>46</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="hist-row">
+          <label for="procedimento">Tipo de Procedimento</label>
+          <input type="text" id="procedimento" name="procedimento" placeholder="Ex: Restauração, Canal, Extração..." required>
+        </div>
+
+        <div class="hist-row">
+          <label for="descricao">Descrição do Procedimento</label>
+          <textarea id="descricao" name="descricao" placeholder="Descreva o tratamento realizado ou planejado" required></textarea>
+        </div>
+
+        <div class="hist-grid-3">
+          <div>
+            <label for="status">Status</label>
+            <select id="status" name="status" required>
+              <option value="">-- Escolha o status --</option>
+              <option>Planejado</option>
+              <option>Em andamento</option>
+              <option>Concluído</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="dataAtendimento">Data do Atendimento</label>
+            <input type="date" id="dataAtendimento" name="dataAtendimento" required>
+          </div>
+
+          <div class="hist-row-btn">
+            <label>&nbsp;</label>
+            <button type="submit" class="hist-btn-salvar">Salvar</button>
+          </div>
+        </div>
+      </form>
+
+      <h3 style="margin-top:30px;">Tabela de Procedimentos Registrados</h3>
+      <table class="hist-tabela">
+        <thead>
+          <tr>
+            <th>Dente</th>
+            <th>Procedimento</th>
+            <th>Descrição</th>
+            <th>Status</th>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>12</td>
+            <td>Restauração</td>
+            <td>Restauração em resina composta</td>
+            <td>Concluído</td>
+            <td>18/10/2025</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>Canal</td>
+            <td>Tratamento endodôntico completo</td>
+            <td>Em andamento</td>
+            <td>05/11/2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- ================= SCRIPT PRINCIPAL ================= -->
+  <script src="javascript/script.js"></script>
+
+  <!-- ================= VLibras (Gratuito e Oficial) ================= -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget("https://vlibras.gov.br/app");
+  </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pacientes do Dentista</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="IMAGEM/LOGOTDB.png" type="image/png" />
+</head>
+
+<body class="pac-wrapper">
+  <header class="pac-header">
+    <div class="pac-logo">
+      <img src="IMAGEM/logo-turma-do-bem-branca.png" alt="Logo Turma do Bem">
+    </div>
+    <div class="pac-user">
+      <p>Dr. João Carlos</p>
+    </div>
+  </header>
+
+  <aside class="pac-menu">
+    <img src="IMAGEM/logo_vision.png" alt="Logo Vision" class="pac-menu-logo" />
+    <nav>
+      <ul>
+        <li><a href="dentista.html">Início</a></li>
+        <li><a href="dentista-paciente.html" class="active">Pacientes</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="pac-content">
+    <h2>Pacientes Atendidos</h2>
+    <p>Selecione um paciente para visualizar o histórico:</p>
+
+    <div class="pac-lista">
+      <div class="pac-card">
+        <img src="IMAGEM/foto_larissa.jpeg" alt="Larissa Silva" />
+        <h3>Larissa Silva</h3>
+        <a href="historico-larissa.html" class="pac-botao">Ver Histórico</a>
+      </div>
+    </div>
+  </main>
+
+    <!-- ================= SCRIPT PRINCIPAL ================= -->
+  <script src="javascript/script.js"></script>
+
+  <!-- ================= VLibras (Gratuito e Oficial) ================= -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget("https://vlibras.gov.br/app");
+  </script>
+</body>
+</html>
+
+
+

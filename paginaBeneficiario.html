@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página do Beneficiário</title>
+
+  <!-- CSS principal + CSS isolado desta página -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/beneficiario.css">
+
+  <!-- Fonte e Favicon -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="IMAGEM/LOGOTDB.png" type="image/png"/>
+</head>
+
+<body>
+  <div class="benef-wrapper">
+
+    <!-- Cabeçalho isolado -->
+    <header class="benef-header">
+      <div class="benef-logo">
+        <img src="imagem/logo-turma-do-bem-branca.png" alt="Logo ONG Turma do Bem"/>
+      </div>
+
+      <div class="benef-user">
+        <p>Olá, <b>Larissa!</b></p>
+        <button class="benef-logout-btn" id="logoutBtn">Sair</button>
+      </div>
+    </header>
+
+    <!-- Menu lateral -->
+    <aside class="benef-menu" id="benefMenu">
+      <span class="benef-menu-toggle" id="benefMenuToggle">☰</span>
+      <img src="imagem/logo_vision.png" alt="Logo Vision" class="benef-menu-logo"/>
+      <a href="#">Início</a>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main class="benef-content">
+      <section class="benef-dados">
+        <img src="imagem/foto_larissa.jpeg" alt="Foto da beneficiária" class="benef-foto"/>
+        <div class="benef-info">
+          <p>
+            <b>Projeto Social:</b>
+            <select id="projetoSelect" required>
+              <option value="" disabled selected>Selecione o projeto social</option>
+              <option value="Dentistas do Bem">Dentistas do Bem</option>
+              <option value="Apolônia do Bem">Apolônia do Bem</option>
+            </select>
+          </p>
+          <p><b>Nome:</b> Larissa Silva</p>
+          <p><b>CPF:</b> 123.456.789-00</p>
+          <p><b>RG:</b> 12.345.678-90</p>
+          <p><b>Endereço:</b> Rua das Flores, 120, São Paulo</p>
+          <p><b>Telefone:</b>(11) 98888-5555</p>
+        </div>
+      </section>
+
+      <section class="benef-consultas">
+        <h2>Próximas consultas</h2>
+        <div id="consultas-container"></div>
+      </section>
+    </main>
+  </div> 
+  <!-- ================= SCRIPT PRINCIPAL ================= -->
+  <script src="javascript/script.js"></script>
+
+  <!-- ================= VLibras ================= -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script> new window.VLibras.Widget('https://vlibras.gov.br/app'); </script>
+</body>
+</html>

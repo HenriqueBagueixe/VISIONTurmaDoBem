@@ -144,5 +144,162 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // =======================================================
-  // ANIMAÇÃO PAGINA DE CADASTRO
-  // =======================================================
+//   PAGINA DE BENEFICIARIO 
+// =======================================================
+
+const menuBtn = document.getElementById('benefMenuToggle');
+const menu = document.getElementById('benefMenu');
+
+menuBtn.addEventListener('click', () => {
+  menu.classList.toggle('abrir');
+});
+
+// ======== BOTÃO SAIR ========
+document.getElementById('logoutBtn').addEventListener('click', () => {
+  alert('Você saiu da sua conta!');
+  window.location.href = 'index.html';
+});
+
+// ======== CONSULTAS ========
+const consultas = [
+  { procedimento: 'Limpeza e Restauração', data: '01/11/2025', hora: '08:30' },
+  { procedimento: 'Tratamento de Canal', data: '02/12/2025', hora: '09:00' },
+  { procedimento: 'Extração de Dente', data: '03/01/2026', hora: '09:50' }
+];
+
+const container = document.getElementById('consultas-container');
+consultas.forEach(c => {
+  const card = document.createElement('div');
+  card.classList.add('benef-consulta-card');
+  card.innerHTML = `
+    <div class="consulta-info">
+      <i>🦷</i>
+      <div><strong>Procedimento:</strong> ${c.procedimento}</div>
+    </div>
+    <div class="consulta-data">${c.data} às ${c.hora}</div>
+  `;
+  container.appendChild(card);
+});
+// =======================================================
+//   PAINÉL DO DENTISTA — FUNCIONALIDADES UNIFICADAS
+// =======================================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // ====================== BOTÃO SAIR ======================
+  const logoutBtn = document.getElementById("dentLogoutBtn");
+
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      showToast("Você saiu da sua conta, Dr. João!");
+      localStorage.clear();
+      setTimeout(() => window.location.href = "paginaLogin.html", 2200);
+    });
+  }
+
+  // ====================== HISTÓRICO — REGISTRO DE PROCEDIMENTOS ======================
+  const form = document.querySelector(".hist-form");
+  const tabela = document.querySelector(".hist-tabela tbody");
+
+  if (form && tabela) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const dente = document.getElementById("numeroDente").value.trim();
+      const procedimento = document.getElementById("procedimento").value.trim();
+      const descricao = document.getElementById("descricao").value.trim();
+      const status = document.getElementById("status").value.trim();
+      const data = document.getElementById("dataAtendimento").value.trim();
+
+      if (!dente || !procedimento || !descricao || !status || !data) {
+        showToast("⚠️ Preencha todos os campos antes de salvar.", true);
+        return;
+      }
+
+      const linha = document.createElement("tr");
+      linha.innerHTML = `
+        <td>${dente}</td>
+        <td>${procedimento}</td>
+        <td>${descricao}</td>
+        <td>${status}</td>
+        <td>${data.split("-").reverse().join("/")}</td>
+        <td class="hist-acoes">
+          <button class="btn-editar">✏️</button>
+          <button class="btn-excluir">🗑️</button>
+        </td>
+      `;
+
+      tabela.appendChild(linha);
+      form.reset();
+      showToast("✅ Procedimento registrado com sucesso!");
+    });
+
+    // Editar e excluir
+    tabela.addEventListener("click", (e) => {
+      const linha = e.target.closest("tr");
+
+      if (e.target.classList.contains("btn-excluir")) {
+        if (confirm("Deseja realmente excluir este procedimento?")) {
+          linha.remove();
+          showToast("🗑️ Procedimento excluído.");
+        }
+      }
+
+      if (e.target.classList.contains("btn-editar")) {
+        const celulas = linha.querySelectorAll("td");
+        document.getElementById("numeroDente").value = celulas[0].textContent;
+        document.getElementById("procedimento").value = celulas[1].textContent;
+        document.getElementById("descricao").value = celulas[2].textContent;
+        document.getElementById("status").value = celulas[3].textContent;
+        const data = celulas[4].textContent.split("/").reverse().join("-");
+        document.getElementById("dataAtendimento").value = data;
+
+        linha.remove();
+        showToast("✏️ Edite os dados e salve novamente.");
+      }
+    });
+  }
+
+  // ====================== FUNÇÃO DE ALERTA VISUAL (TOAST) ======================
+  function showToast(mensagem, isErro = false) {
+    let toast = document.createElement("div");
+    toast.className = "toast-msg";
+    toast.textContent = mensagem;
+    if (isErro) toast.classList.add("toast-erro");
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+      toast.classList.add("show");
+    }, 100);
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+      setTimeout(() => toast.remove(), 500);
+    }, 3000);
+  }
+
+  // ====================== ANIMAÇÃO SUAVE ======================
+  const elementos = document.querySelectorAll(
+    ".dent-dados, .dent-agenda, .pac-card, .hist-dados, .hist-atendimentos, .hist-arcada"
+  );
+
+  if (elementos.length > 0) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elementos.forEach((el) => {
+      el.classList.add("fade-scroll");
+      observer.observe(el);
+    });
+  }
+});

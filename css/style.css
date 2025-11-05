@@ -1117,4 +1117,706 @@ input:focus{
   .top-row{justify-items:stretch}
   select{width:100%}
 }
+/* =======================================================
+   PÁGINA BENEFICIÁRIO — ESTILOS EXCLUSIVOS
+======================================================= */
+
+/* Estrutura base */
+.benef-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f9e8;
+}
+
+/* =======================================================
+   CABEÇALHO
+======================================================= */
+.benef-header {
+  background-color: #f78b1f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 30px;
+}
+
+.benef-logo img {
+  height: 48px;
+}
+
+.benef-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.benef-user p {
+  margin: 0;
+}
+
+.benef-logout-btn {
+  background-color: #fff;
+  color: #f78b1f;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.benef-logout-btn:hover {
+  background-color: #ffe0b2;
+}
+
+/* =======================================================
+   MENU LATERAL
+======================================================= */
+.benef-menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 70px);
+  background-color: #b8d40d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  transition: transform 0.3s ease;
+  z-index: 50;
+}
+
+.benef-menu-logo {
+  width: 110px;
+  margin-bottom: 20px;
+}
+
+.benef-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  margin: 8px 0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.benef-menu a:hover {
+  background-color: #9dbf1a;
+}
+
+/* Botão hamburguer */
+.benef-menu-toggle {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+}
+
+/* =======================================================
+   CONTEÚDO PRINCIPAL
+======================================================= */
+.benef-content {
+  margin-left: 240px;
+  padding: 30px;
+}
+
+/* =======================================================
+   DADOS PESSOAIS
+======================================================= */
+.benef-dados {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff3e0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.benef-foto {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.benef-info {
+  background-color: #f78b1f;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.benef-info select {
+  background-color: white;
+  color: #f78b1f;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.benef-info select:hover {
+  background-color: #ffe0b2;
+}
+
+/* =======================================================
+   CONSULTAS
+======================================================= */
+.benef-consultas {
+  margin-top: 30px;
+}
+
+.benef-consultas h2 {
+  color: #607a1e;
+  margin-bottom: 15px;
+}
+
+.benef-consulta-card {
+  background-color: white;
+  border-left: 5px solid #f78b1f;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+}
+
+.benef-consulta-card:hover {
+  transform: scale(1.02);
+}
+
+/* =======================================================
+   RESPONSIVIDADE
+======================================================= */
+@media (max-width: 768px) {
+  .benef-menu-toggle {
+    display: block;
+  }
+
+  .benef-menu {
+    transform: translateX(-100%);
+    width: 200px;
+  }
+
+  .benef-menu.abrir {
+    transform: translateX(0);
+  }
+
+  .benef-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .benef-dados {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .benef-foto {
+    margin: 0 0 15px 0;
+  }
+
+  .benef-info {
+    width: 100%;
+  }
+
+  .benef-consulta-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* =======================================================
+   PAINEL DO DENTISTA / PACIENTE / HISTÓRICO
+======================================================= */
+
+/* ======== estrutura base ======== */
+.dent-wrapper, .pac-wrapper, .hist-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #f7f9e8;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ======== cabeçalho ======== */
+.dent-header, .pac-header, .hist-header {
+  background-color: #f78b1f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.dent-logo img, .pac-logo img, .hist-logo img {
+  height: 45px;
+}
+
+.dent-user, .pac-user, .hist-user {
+  font-weight: 600;
+}
+
+.dent-logout {
+  background-color: #fff;
+  color: #f78b1f;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dent-logout:hover {
+  background-color: #ffe0b2;
+}
+
+/* ======== menu lateral ======== */
+.dent-menu, .pac-menu, .hist-menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 70px);
+  background-color: #BABF34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+.dent-menu-logo, .pac-menu-logo, .hist-menu-logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.dent-menu a, .pac-menu a, .hist-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 8px;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.dent-menu a:hover,
+.pac-menu a:hover,
+.hist-menu a:hover,
+.dent-menu a.active,
+.pac-menu a.active,
+.hist-menu a.active {
+  background-color: #9dbf1a;
+}
+
+/* ======== conteúdo ======== */
+.dent-content, .pac-content, .hist-content {
+  margin-left: 240px;
+  margin-top: 90px;
+  padding: 30px;
+}
+
+/* ======== dados pessoais / paciente ======== */
+.dent-dados, .hist-dados {
+  display: flex;
+  align-items: center;
+  background: #fff3e0;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.dent-foto, .hist-foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #BABF34;
+}
+
+.dent-info, .hist-info {
+  background: #f78b1f;
+  color: white;
+  padding: 18px;
+  border-radius: 10px;
+  line-height: 1.8;
+  flex: 1;
+}
+
+/* ======== agenda ======== */
+.dent-agenda-fixa img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ======== lista de pacientes ======== */
+.pac-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.pac-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  width: 230px;
+  text-align: center;
+  border-left: 6px solid #BABF34;
+  transition: transform 0.3s;
+}
+
+.pac-card:hover {
+  transform: scale(1.04);
+}
+
+.pac-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #BABF34;
+  margin-bottom: 10px;
+}
+
+.pac-botao {
+  background: #f78b1f;
+  color: #fff;
+  border-radius: 999px;
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.pac-botao:hover {
+  background: #ffd28a;
+  color: #333;
+}
+
+/* ======== histórico ======== */
+.hist-cards {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.hist-card {
+  background: #fff;
+  padding: 16px;
+  border-left: 6px solid #BABF34;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+.hist-arcada {
+  margin-top: 40px;
+}
+
+.hist-arcada-img {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* =======================================================
+   FILTRO DE DENTES E PROCEDIMENTOS
+======================================================= */
+.hist-dente-filtro {
+  background-color: #fff;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.hist-dente-filtro h3 {
+  color: #607a1e;
+  margin-bottom: 15px;
+}
+
+.hist-dente-filtro select,
+.hist-dente-filtro input,
+.hist-dente-filtro textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 2px solid #e4e4e4;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.hist-dente-filtro select:focus,
+.hist-dente-filtro input:focus,
+.hist-dente-filtro textarea:focus {
+  border-color: #b5cf36;
+  box-shadow: 0 0 0 3px rgba(181, 207, 54, 0.25);
+}
+
+.hist-btn-salvar {
+  background: #f78b1f;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 26px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.hist-btn-salvar:hover {
+  background-color: #ffd28a;
+  color: #333;
+}
+
+/* Tabela */
+.hist-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+}
+
+.hist-tabela th, .hist-tabela td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.hist-tabela th {
+  background: #BABF34;
+  color: #fff;
+  font-weight: 700;
+}
+
+.hist-tabela th:last-child {
+  text-align: center;
+  width: 120px;
+}
+
+.hist-tabela td:last-child {
+  text-align: center;
+}
+
+.hist-acoes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-editar,
+.btn-excluir {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+.btn-editar:hover {
+  transform: scale(1.2);
+  color: #607a1e;
+}
+
+.btn-excluir:hover {
+  transform: scale(1.2);
+  color: #d62828;
+}
+
+.hidden {
+  display: none;
+}
+
+/* =======================================================
+   RESPONSIVIDADE
+======================================================= */
+
+/* Extra small (phones, até 600px) */
+@media (max-width: 600px) {
+  .dent-content, .pac-content, .hist-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .dent-menu, .pac-menu, .hist-menu {
+    display: none;
+  }
+
+  .dent-dados, .hist-dados {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pac-lista {
+    justify-content: center;
+  }
+
+  .hist-arcada-img {
+    max-width: 100%;
+  }
+}
+
+/* Small (portrait tablets e celulares grandes) */
+@media (min-width: 600px) and (max-width: 767px) {
+  .pac-lista {
+    justify-content: center;
+  }
+}
+
+/* Medium (landscape tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .dent-content, .pac-content, .hist-content {
+    margin-left: 200px;
+  }
+}
+
+/* Large (laptops/desktops) */
+@media (min-width: 992px) and (max-width: 1299px) {
+  .dent-content, .pac-content, .hist-content {
+    margin-left: 220px;
+  }
+}
+
+/* Extra-large (1300px+) */
+@media (min-width: 1300px) {
+  .hist-tabela th, .hist-tabela td {
+    font-size: 16px;
+  }
+}
+.hist-form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  margin-top: 20px;
+}
+
+.hist-row {
+  margin-bottom: 15px;
+}
+
+.hist-form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.hist-form input,
+.hist-form select,
+.hist-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #e4e4e4;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.hist-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.hist-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 15px;
+  align-items: end;
+}
+
+.hist-btn-salvar {
+  background-color: #f78b1f;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hist-btn-salvar:hover {
+  background-color: #ffd28a;
+  color: #333;
+}
+/* =======================================================
+   ALERTA VISUAL (TOAST)
+======================================================= */
+.toast-msg {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #4e7c11;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+  z-index: 9999;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+}
+
+.toast-msg.toast-erro {
+  background-color: #c0392b;
+}
+
+.toast-msg.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Modo responsivo */
+@media (max-width: 600px) {
+  .toast-msg {
+    right: 10px;
+    left: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
 
