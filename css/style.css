@@ -164,9 +164,8 @@ body {
 .btn-fazer-parte{
   background-color: #f78b1f;
   color: #fff;
-  border: none;
   border-radius: 8px;
-  padding: 10px 275px;
+  padding: 9px 34px;
   font-weight: 700;
   font-size: 18px;
   cursor: pointer;
@@ -1445,6 +1444,11 @@ input:focus{
   padding: 30px;
 }
 
+.titulo-agenda{
+  color: #f78b1f;
+  text-align: center;
+}
+
 /* ======== dados pessoais / paciente ======== */
 .dent-dados, .hist-dados {
   display: flex;
@@ -1809,16 +1813,6 @@ input:focus{
 .toast-msg.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Modo responsivo */
-@media (max-width: 600px) {
-  .toast-msg {
-    right: 10px;
-    left: 10px;
-    text-align: center;
-    font-size: 14px;
-  }
 }
 
 

@@ -1,7 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  
   // MENU HAMBÚRGUER GLOBAL
  
   const hamburger = document.getElementById("hamburger");
@@ -166,6 +165,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// ====== BOTÃO CONFIRMAR CADASTRO =======//
+document.addEventListener("DOMContentLoaded", function () {
+  const botaoConfirmar = document.getElementById("btnConfirmar");
+
+  if (botaoConfirmar) {
+    botaoConfirmar.addEventListener("click", function (event) {
+      event.preventDefault(); // impede envio real do formulário
+      alert("Cadastro realizado com sucesso, entraremos em contato!");
+    });
+  }
+});
+
 
 // ======== CONSULTAS ========
 const consultas = [
