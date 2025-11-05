@@ -1345,147 +1345,6 @@ input:focus{
   }
 }
 /* =======================================================
-   PAINEL GESTOR
-======================================================= */
-
-/* ======== estrutura base ======== */
-.dent-wrapper{
-  display: flex;
-  flex-direction: column;
-  background: #f7f9e8;
-  min-height: 100vh;
-  font-family: "Poppins", sans-serif;
-}
-
-/* ======== cabeçalho ======== */
-.gest-header{
-  background-color: #f78b1f;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 30px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-}
-
-.gest-logo img{
-  height: 45px;
-}
-
-.gest-user{
-  font-weight: 600;
-}
-
-.gest-logout {
-  background-color: #fff;
-  color: #f78b1f;
-  border: none;
-  border-radius: 8px;
-  padding: 6px 12px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.gest-logout:hover {
-  background-color: #ffe0b2;
-}
-
-/* ======== menu lateral ======== */
-.gest-menu{
-  position: fixed;
-  top: 70px;
-  left: 0;
-  width: 220px;
-  height: calc(100vh - 70px);
-  background-color: #BABF34;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 30px;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-
-}
-
-.gest-menu-logo{
-  width: 100px;
-  margin-bottom: 20px;
-}
-
-.gest-menu a{
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  padding: 10px 20px;
-  display: block;
-  border-radius: 8px;
-  margin: 5px 0;
-  transition: 0.3s;
-}
-
-.gest-menu a:hover,
-.gest-menu a:hover,
-.gest-menu a.active,
-.gest-menu a.active{
-  background-color: #d5da5b;
-}
-
-/* ======== conteúdo ======== */
-.titulo-dados{
-  color: #f78b1f;
-  text-align: center;
-}
-
-
-.gest-content{
-  margin-left: 240px;
-  margin-top: 90px;
-  padding: 30px;
-  background-color: #ffffff;
-}
-
-.grafico-ficticio img {
-  width: 100%;
-  max-width: 900px;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto;
-}
-
-/* ======== dados pessoais / paciente ======== */
-.gest-dados{
-  display: flex;
-  align-items: center;
-  background: #fff3e0;
-  padding: 20px;
-  border-radius: 10px;
-  gap: 20px;
-  flex-wrap: wrap;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-}
-
-.gest-foto{
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid #BABF34;
-}
-
-.gest-info{
-  background: #f78b1f;
-  color: white;
-  padding: 18px;
-  border-radius: 10px;
-  line-height: 1.8;
-  flex: 1;
-}
-/* =======================================================
    ESTILO GERAL — PAINEL DENTISTA / PACIENTE / HISTÓRICO
 ======================================================= */
 
@@ -1851,5 +1710,183 @@ input:focus{
 @media (min-width: 1300px) {
   .hist-tabela th, .hist-tabela td {
     font-size: 16px;
+  }
+}
+/* =======================================================
+   PAINEL DO GESTOR
+======================================================= */
+
+.gest-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #f7f9e8;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ======== CABEÇALHO ======== */
+.gest-header {
+  background-color: #f78b1f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.gest-logo img {
+  height: 45px;
+}
+
+.gest-user {
+  font-weight: 600;
+}
+
+/* ======== MENU ======== */
+.gest-menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 70px);
+  background-color: #BABF34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gest-menu-logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.gest-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 8px;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.gest-menu a:hover,
+.gest-menu a.active {
+  background-color: #d5da5b;
+}
+
+/* ======== CONTEÚDO ======== */
+.gest-content {
+  margin-left: 240px;
+  margin-top: 90px;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.titulo-dados {
+  color: #f78b1f;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ======== DADOS PESSOAIS ======== */
+.gest-dados {
+  display: flex;
+  align-items: center;
+  background: #fff3e0;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gest-foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #BABF34;
+}
+
+.gest-info {
+  background: #f78b1f;
+  color: white;
+  padding: 18px;
+  border-radius: 10px;
+  line-height: 1.8;
+  flex: 1;
+}
+
+/* ======== GRÁFICO ======== */
+.grafico-ficticio img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* =======================================================
+   RESPONSIVIDADE — GESTOR
+======================================================= */
+
+/* até 600px */
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .gest-menu {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 220px;
+    height: calc(100vh - 70px);
+    background-color: #BABF34;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .gest-menu.show {
+    display: flex;
+  }
+
+  .gest-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .gest-dados {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* tablets médios */
+@media (min-width: 768px) and (max-width: 991px) {
+  .gest-content {
+    margin-left: 200px;
+  }
+}
+
+/* notebooks */
+@media (min-width: 992px) and (max-width: 1299px) {
+  .gest-content {
+    margin-left: 220px;
   }
 }

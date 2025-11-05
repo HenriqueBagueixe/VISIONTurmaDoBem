@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página do Gestor</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel do Gestor - Turma do Bem</title>
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="icon" href="IMAGEM/LOGOTDB.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="IMAGEM/LOGOTDB.png" type="image/png" />
 </head>
+
 <body class="gest-wrapper">
+  <!-- ================= CABEÇALHO ================= -->
   <header class="gest-header">
+    <button class="hamburger" id="menuToggle" aria-label="Abrir menu" aria-controls="gestMenu" aria-expanded="false">
+      ☰
+    </button>
+
     <div class="gest-logo">
       <a href="index.html">
-      <img src="IMAGEM/logo-turma-do-bem-branca.png" alt="Logo Turma do Bem">
+        <img src="IMAGEM/logo-turma-do-bem-branca.png" alt="Logo Turma do Bem" />
       </a>
     </div>
-
-    <!-- botão -->
-    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">☰</button>
 
     <div class="gest-user">
       <p>Olá, <b>Sra. Clara Silva</b></p>
@@ -26,8 +29,9 @@
     </div>
   </header>
 
-  <aside class="gest-menu">
-    <img src="IMAGEM/logo_vision.png" alt="Logo Vision" class="dent-menu-logo" />
+  <!-- ================= MENU LATERAL ================= -->
+  <aside id="gestMenu" class="gest-menu">
+    <img src="IMAGEM/logo_vision.png" alt="Logo Vision" class="gest-menu-logo" />
     <nav>
       <ul>
         <li><a href="paginaGestor.html" class="active">Início</a></li>
@@ -35,32 +39,30 @@
     </nav>
   </aside>
 
+  <!-- ================= CONTEÚDO ================= -->
   <main class="gest-content">
     <section class="gest-dados">
-      <img src="imagem/foto-gestora.jpg" alt="Foto da gestora" class="gest-foto"/>
+      <img src="IMAGEM/foto-gestora.jpg" alt="Foto da gestora" class="gest-foto" />
       <div class="gest-info">
         <h2>Dados Pessoais</h2>
-        <p><b>Nome:</b> Clara Silva </p>
-        <p><b>Cargo:</b> Diretor de Operações (COO)</p>
+        <p><b>Nome:</b> Clara Silva</p>
+        <p><b>Cargo:</b> Diretora de Operações (COO)</p>
         <p><b>Telefone:</b> (11) 98888-7777</p>
         <p><b>Endereço:</b> Rua Exemplo, 100 - São Paulo</p>
       </div>
     </section>
 
     <section class="gest-grafico">
-      <br>
-      <h2 class="titulo-dados">Nossos resultados</h2>
-      <br>
+      <h2 class="titulo-dados">Nossos Resultados</h2>
       <div class="grafico-ficticio">
-        <img src="imagem/BPO-TDB (1).png" alt="Grafico ficticio" />
+        <img src="IMAGEM/BPO-TDB (1).png" alt="Gráfico de resultados" />
       </div>
     </section>
   </main>
 
-  <!-- ================= SCRIPT PRINCIPAL ================= -->
   <script src="javascript/script.js"></script>
 
-  <!-- ================= VLibras (Gratuito e Oficial) ================= -->
+  <!-- VLibras -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -69,9 +71,6 @@
   </div>
 
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget("https://vlibras.gov.br/app");
-  </script>
-    
+  <script>new window.VLibras.Widget("https://vlibras.gov.br/app");</script>
 </body>
 </html>

@@ -416,7 +416,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu =
     document.querySelector(".dent-menu") ||
     document.querySelector(".pac-menu") ||
-    document.querySelector(".hist-menu");
+    document.querySelector(".hist-menu") ||
+    document.querySelector(".gest-menu");
 
   if (menuToggle && menu) {
     menuToggle.addEventListener("click", () => {
