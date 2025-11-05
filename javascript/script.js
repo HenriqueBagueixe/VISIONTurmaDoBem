@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
   logoutButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       alert('Saindo da conta...');
-      window.location.href = 'index.html'; // ajuste se sua página inicial tiver outro nome
+      window.location.href = 'index.html'; 
     });
   });
 });
