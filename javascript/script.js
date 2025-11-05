@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (botaoConfirmar) {
     botaoConfirmar.addEventListener("click", function (event) {
-      event.preventDefault(); // impede envio real do formulário
+      event.preventDefault(); 
       alert("Cadastro realizado com sucesso, entraremos em contato!");
     });
   }
@@ -352,7 +352,67 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
 
+      if (selectTipo) {
       selectTipo.addEventListener('change', toggleByTipo);
       document.addEventListener('DOMContentLoaded', toggleByTipo);
       toggleByTipo(); // executa logo ao carregar
-    })();
+      }
+      })();
+
+// ====== FORM CADASTRO ====== //
+document.addEventListener("DOMContentLoaded", () => {
+  // Verifica se estamos na página de cadastro antes de rodar o código
+  if (!window.location.pathname.includes("paginaCadastro.html")) return;
+
+  const formCadastro = document.querySelector('form.form');
+  if (formCadastro) {
+    formCadastro.addEventListener("submit", (e) => {
+      if (!formCadastro.checkValidity()) {
+        e.preventDefault();
+        formCadastro.reportValidity(); 
+        return;
+      }
+
+      e.preventDefault(); // simula envio
+      alert("Cadastro realizado com sucesso, entraremos em contato!");
+      window.location.href = "paginaLogin.html"; // redireciona após cadastrar
+    });
+  }
+});
+
+
+// ====== LOGIN SIMULADO ====== //
+document.addEventListener("DOMContentLoaded", () => {
+  const formLogin = document.getElementById("formLogin"); // <form id="formLogin" ...>
+  if (!formLogin) return; // <-- evita erro em outras páginas
+
+  const routes = {
+    beneficiario: "./paginaBeneficiario.html",
+    gestor: "./paginaGestor.html",
+    dentista: "./dentista.html",
+  };
+
+  formLogin.addEventListener("submit", (e) => {
+    if (!formLogin.checkValidity()) {
+      e.preventDefault();
+      formLogin.reportValidity();
+      return;
+    }
+    e.preventDefault();
+
+    const perfil = document.getElementById("perfil").value;
+    const destino = routes[perfil];
+    if (!destino) {
+      alert("Selecione um perfil válido.");
+      return;
+    }
+
+    alert("Login efetuado!");
+    window.location.assign(destino);
+  });
+});
+
+
+
+
+

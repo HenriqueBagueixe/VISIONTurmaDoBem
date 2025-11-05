@@ -51,29 +51,25 @@
       </div>
       <div class="login-branco">
         <h2 class="bem-vindo">Bem vindo!</h2>
-        <form class="form" action="#" method="post">
-          <label for="email">seu e-mail</label>
-          <input id="email" type="email" name="email" placeholder="seu@email.com.br"/>
+        <form id="formLogin" class="form" action="" method="get">
+        <label for="perfil">você é:</label>
+        <select id="perfil" name="perfil" required>
+        <option value="" selected disabled>Selecione...</option>
+        <option value="beneficiario">Beneficiário</option>
+        <option value="gestor">Gestor</option>
+        <option value="dentista">Dentista</option>
+        </select>
 
-          <label for="senha">sua senha</label>
-          <input id="senha" type="password" name="senha" placeholder="sua senha"/>
+        <label for="email">seu e-mail</label>
+        <input id="email" type="email" name="email" required />
 
-          <a href="paginaBeneficiario.html" class="btn-primeiro">
-          <span class="arrow">➜</span>
-          Acesso a Página do beneficiário
-          </a>
+        <label for="senha">sua senha</label>
+        <input id="senha" type="password" name="senha" required minlength="6" />
 
-          <a href="dentista.html" class="btn-primeiro">
-          <span class="arrow">➜</span>
-          Acesso a Página do dentista
-          </a>
-
-          <a href="paginaGestor.html" class="btn-primeiro">
-          <span class="arrow">➜</span>
-          Acesso a Página Gestor
-          </a>
-
-          </form>
+        <button type="submit" class="btn-primeiro">
+        <span class="arrow">➜</span> Entrar
+        </button>
+        </form>
 
         <p class="signup-hint">
           Não tem uma conta ainda? <a href="paginaCadastro.html">Clique aqui.</a>
