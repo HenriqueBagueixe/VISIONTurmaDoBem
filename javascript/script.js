@@ -411,6 +411,20 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.assign(destino);
   });
 });
+// ====================== MENU HAMBÚRGUER ======================
+const menuToggle = document.getElementById("menuToggle");
+
+// identifica o menu correto da página atual
+let menu =
+  document.querySelector(".dent-menu") ||
+  document.querySelector(".pac-menu") ||
+  document.querySelector(".hist-menu");
+
+if (menuToggle && menu) {
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+}
 
 
 

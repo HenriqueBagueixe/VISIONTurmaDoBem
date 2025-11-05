@@ -1959,5 +1959,37 @@ input:focus{
   opacity: 1;
   transform: translateY(0);
 }
+@media (max-width: 600px) {
+  .hamburger,
+  #menuToggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+  }
 
+  .dent-menu,
+  .pac-menu,
+  .hist-menu {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 220px;
+    height: calc(100vh - 70px);
+    background-color: #BABF34;
+    padding-top: 30px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
 
+  .dent-menu.show,
+  .pac-menu.show,
+  .hist-menu.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
