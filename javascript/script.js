@@ -411,20 +411,33 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.assign(destino);
   });
 });
-// ====================== MENU HAMBÚRGUER ======================
-const menuToggle = document.getElementById("menuToggle");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menuToggle");
+  const menu =
+    document.querySelector(".dent-menu") ||
+    document.querySelector(".pac-menu") ||
+    document.querySelector(".hist-menu");
 
-// identifica o menu correto da página atual
-let menu =
-  document.querySelector(".dent-menu") ||
-  document.querySelector(".pac-menu") ||
-  document.querySelector(".hist-menu");
+  if (menuToggle && menu) {
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("show");
+    });
 
-if (menuToggle && menu) {
-  menuToggle.addEventListener("click", () => {
-    menu.classList.toggle("show");
-  });
-}
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && e.target !== menuToggle) {
+        menu.classList.remove("show");
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 600) {
+        menu.classList.remove("show");
+      }
+    });
+  }
+});
+
+
 
 
 
