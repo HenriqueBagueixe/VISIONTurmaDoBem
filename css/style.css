@@ -539,7 +539,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 /* =======================================================
-   PÁGINA CONTATO — TURMA DO BEM
+   PAGINA CONTATO 
 ======================================================= */
 
 /* Banner */
@@ -636,7 +636,7 @@ body {
   border-radius: 18px;
 }
 /* =======================================================
-   PÁGINA FAQ — TURMA DO BEM
+   PÁGINA FAQ 
 ======================================================= */
 
 /* Banner */
@@ -707,7 +707,7 @@ body {
   padding-top: 10px;
 }
 /* =======================================================
-   PÁGINA INTEGRANTES — TURMA DO BEM
+   PÁGINA INTEGRANTES 
 ======================================================= */
 
 /* Banner */
@@ -774,7 +774,7 @@ body {
   transform: scale(1.1);
 }
 /* =======================================================
-   SEÇÃO PAGINA DE LOGIN
+  PAGINA DE LOGIN
 ======================================================= */
 * {
   box-sizing: border-box;
@@ -935,7 +935,7 @@ input:focus{
   }
 }
 /* =======================================================
-   SEÇÃO PAGINA DE CADASTRO
+  PAGINA DE CADASTRO
 ======================================================= */
 *{
   box-sizing:border-box;
@@ -1119,7 +1119,7 @@ input:focus{
   select{width:100%}
 }
 /* =======================================================
-   PÁGINA BENEFICIÁRIO — ESTILOS EXCLUSIVOS
+   PÁGINA BENEFICIÁRIO 
 ======================================================= */
 
 /* Estrutura base */
@@ -1345,7 +1345,7 @@ input:focus{
   }
 }
 /* =======================================================
-   ESTILO GERAL — PAINEL DENTISTA / PACIENTE / HISTÓRICO
+  PAINEL DENTISTA / PACIENTE / HISTÓRICO
 ======================================================= */
 
 .dent-wrapper, .pac-wrapper, .hist-wrapper {
@@ -1713,9 +1713,10 @@ input:focus{
   }
 }
 /* =======================================================
-   ESTILO GERAL — PAINEL GESTOR
+   PAINEL DO GESTOR
 ======================================================= */
 
+/* ===== Wrapper ===== */
 .gest-wrapper {
   display: flex;
   flex-direction: column;
@@ -1725,7 +1726,9 @@ input:focus{
   overflow-x: hidden;
 }
 
-/* ======== CABEÇALHO ======== */
+/* =======================================================
+   CABEÇALHO DO GESTOR
+======================================================= */
 .gest-header {
   background-color: #f78b1f;
   color: #fff;
@@ -1746,12 +1749,27 @@ input:focus{
 
 .gest-user {
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 15px;
 }
 
-/* ======== MENU LATERAL ======== */
+
+.benef-logout-btn {
+  background-color: #fff;
+  color: #f78b1f;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.benef-logout-btn:hover {
+  background-color: #ffe0b2;
+}
+
+/* =======================================================
+   MENU LATERAL
+======================================================= */
+
 .gest-menu {
   position: fixed;
   top: 70px;
@@ -1788,14 +1806,25 @@ input:focus{
   background-color: #d5da5b;
 }
 
-/* ======== CONTEÚDO ======== */
+/* =======================================================
+   CONTEÚDO
+======================================================= */
+
 .gest-content {
   margin-left: 240px;
   margin-top: 90px;
   padding: 30px;
 }
 
-/* ======== DADOS PESSOAIS ======== */
+.titulo-dados {
+  color: #f78b1f;
+  text-align: center;
+}
+
+/* =======================================================
+   BLOCOS DE INFORMAÇÃO
+======================================================= */
+
 .gest-dados {
   display: flex;
   align-items: center;
@@ -1824,36 +1853,20 @@ input:focus{
   flex: 1;
 }
 
-.gest-info h2 {
-  margin-bottom: 10px;
-  font-size: 1.4rem;
-}
+/* =======================================================
+   GRÁFICO DO GESTOR
+======================================================= */
 
-/* ======== GRÁFICO ======== */
-.gest-grafico {
-  margin-top: 40px;
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-.gest-grafico h2 {
-  color: #f78b1f;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.grafico-ficticio img {
+.gest-grafico-fixo img {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   border-radius: 10px;
   display: block;
   margin: 0 auto;
 }
 
 /* =======================================================
-   MENU HAMBÚRGUER E RESPONSIVIDADE
+   ÍCONE HAMBÚRGUER
 ======================================================= */
 
 .hamburger {
@@ -1861,12 +1874,17 @@ input:focus{
   background: none;
   border: none;
   font-size: 28px;
-  color: #f78b1f;
+  color: #fff;
   cursor: pointer;
 }
 
-/* --- até 600px (celulares) --- */
+/* =======================================================
+   RESPONSIVIDADE 
+======================================================= */
+
+
 @media (max-width: 600px) {
+
   .hamburger {
     display: block;
   }
@@ -1882,10 +1900,11 @@ input:focus{
     flex-direction: column;
     align-items: center;
     padding-top: 30px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
     z-index: 999;
   }
 
+  
   .gest-menu.show {
     display: flex;
   }
@@ -1901,46 +1920,25 @@ input:focus{
   }
 }
 
-/* --- entre 768px e 991px (tablets) --- */
+@media (min-width: 600px) and (max-width: 767px) {
+  
+}
+
+
 @media (min-width: 768px) and (max-width: 991px) {
   .gest-content {
     margin-left: 200px;
   }
 }
 
-/* --- entre 992px e 1299px (notebooks médios) --- */
+
 @media (min-width: 992px) and (max-width: 1299px) {
   .gest-content {
     margin-left: 220px;
   }
 }
-@media (max-width: 600px) {
-  .hamburger {
-    display: block;
-  }
 
-  .gest-menu {
-    display: none;
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 220px;
-    height: calc(100vh - 70px);
-    background-color: #BABF34;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-  }
 
-  .gest-menu.show {
-    display: flex;
-  }
-
-  .gest-content {
-    margin-left: 0;
-    padding: 20px;
-  }
+@media (min-width: 1300px) {
+  
 }
-

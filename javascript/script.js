@@ -202,11 +202,11 @@ if (container) {
   });
 }
 // =======================================================
-//   PAINÉL DO DENTISTA — FUNCIONALIDADES UNIFICADAS
+//   PAINÉL DO DENTISTA / PACIENTE / HISTÓRICO / GESTOR
+//   FUNCIONALIDADES UNIFICADAS
 // =======================================================
 
 document.addEventListener("DOMContentLoaded", () => {
-
 
   // ====================== HISTÓRICO — REGISTRO DE PROCEDIMENTOS ======================
   const form = document.querySelector(".hist-form");
@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ====================== ANIMAÇÃO SUAVE ======================
   const elementos = document.querySelectorAll(
-    ".dent-dados, .dent-agenda, .pac-card, .hist-dados, .hist-atendimentos, .hist-arcada"
+    ".dent-dados, .dent-agenda, .pac-card, .hist-dados, .hist-atendimentos, .hist-arcada, .gest-dados, .gest-grafico"
   );
 
   if (elementos.length > 0) {
@@ -314,77 +314,80 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// =======CADASTRO=======//
+// =======================================================
+//   SISTEMA DE CADASTRO DINÂMICO
+// =======================================================
 (function () {
-      const selectTipo = document.getElementById('tipo');
-      const blocks = document.querySelectorAll('[data-show-for]');
+  const selectTipo = document.getElementById('tipo');
+  const blocks = document.querySelectorAll('[data-show-for]');
 
-      function toggleByTipo() {
-        const tipo = selectTipo.value;
+  function toggleByTipo() {
+    const tipo = selectTipo.value;
 
-        blocks.forEach(block => {
-          const targets = block.dataset.showFor.split(',').map(s => s.trim());
-          const show = targets.includes(tipo);
+    blocks.forEach(block => {
+      const targets = block.dataset.showFor.split(',').map(s => s.trim());
+      const show = targets.includes(tipo);
 
-          // mostra/esconde bloco
-          block.classList.toggle('hidden', !show);
+      block.classList.toggle('hidden', !show);
 
-          // liga/desliga required dos inputs internos
-          block.querySelectorAll('input, select, textarea').forEach(input => {
-            if (show) {
-              if (input.dataset.wasRequired === 'true') {
-                input.required = true;
-                delete input.dataset.wasRequired;
-              }
-            } else {
-              if (input.required) {
-                input.dataset.wasRequired = 'true';
-                input.required = false;
-              }
-              // limpa valor quando oculta
-              if (input.tagName === 'SELECT') {
-                input.selectedIndex = 0;
-              } else {
-                input.value = '';
-              }
-            }
-          });
-        });
-      }
+      block.querySelectorAll('input, select, textarea').forEach(input => {
+        if (show) {
+          if (input.dataset.wasRequired === 'true') {
+            input.required = true;
+            delete input.dataset.wasRequired;
+          }
+        } else {
+          if (input.required) {
+            input.dataset.wasRequired = 'true';
+            input.required = false;
+          }
 
-      if (selectTipo) {
-      selectTipo.addEventListener('change', toggleByTipo);
-      document.addEventListener('DOMContentLoaded', toggleByTipo);
-      toggleByTipo(); // executa logo ao carregar
-      }
-      })();
+          if (input.tagName === 'SELECT') {
+            input.selectedIndex = 0;
+          } else {
+            input.value = '';
+          }
+        }
+      });
+    });
+  }
 
-// ====== FORM CADASTRO ====== //
+  if (selectTipo) {
+    selectTipo.addEventListener('change', toggleByTipo);
+    document.addEventListener('DOMContentLoaded', toggleByTipo);
+    toggleByTipo();
+  }
+})();
+
+// =======================================================
+//   FORMULÁRIO DE CADASTRO
+// =======================================================
 document.addEventListener("DOMContentLoaded", () => {
-  // Verifica se estamos na página de cadastro antes de rodar o código
   if (!window.location.pathname.includes("paginaCadastro.html")) return;
 
   const formCadastro = document.querySelector('form.form');
+
   if (formCadastro) {
     formCadastro.addEventListener("submit", (e) => {
       if (!formCadastro.checkValidity()) {
         e.preventDefault();
-        formCadastro.reportValidity(); 
+        formCadastro.reportValidity();
         return;
       }
 
-      e.preventDefault(); // simula envio
+      e.preventDefault();
       alert("Cadastro realizado com sucesso, entraremos em contato!");
-      window.location.href = "paginaLogin.html"; // redireciona após cadastrar
+      window.location.href = "paginaLogin.html";
     });
   }
 });
 
-
-// ====== LOGIN SIMULADO ====== //
+// =======================================================
+//   LOGIN SIMULADO
+// =======================================================
 document.addEventListener("DOMContentLoaded", () => {
-  const formLogin = document.getElementById("formLogin"); // <form id="formLogin" ...>
-  if (!formLogin) return; // <-- evita erro em outras páginas
+  const formLogin = document.getElementById("formLogin");
+  if (!formLogin) return;
 
   const routes = {
     beneficiario: "./paginaBeneficiario.html",
@@ -402,6 +405,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const perfil = document.getElementById("perfil").value;
     const destino = routes[perfil];
+
     if (!destino) {
       alert("Selecione um perfil válido.");
       return;
@@ -411,13 +415,17 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.assign(destino);
   });
 });
+
+// =======================================================
+//   MENU HAMBÚRGUER — ATUALIZADO PARA GESTOR
+// =======================================================
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menuToggle");
   const menu =
     document.querySelector(".dent-menu") ||
     document.querySelector(".pac-menu") ||
     document.querySelector(".hist-menu") ||
-    document.querySelector(".gest-menu");
+    document.querySelector(".gest-menu");  // ✅ ADICIONADO
 
   if (menuToggle && menu) {
     menuToggle.addEventListener("click", () => {
@@ -437,10 +445,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-
-
-
-
-
-

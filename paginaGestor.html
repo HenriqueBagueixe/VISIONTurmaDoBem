@@ -5,22 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Painel do Gestor - Turma do Bem</title>
 
-  <!-- CSS PRINCIPAL -->
   <link rel="stylesheet" href="css/style.css" />
-
-  <!-- FONTES -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- ÍCONE -->
   <link rel="icon" href="IMAGEM/LOGOTDB.png" type="image/png" />
 </head>
 
 <body class="gest-wrapper">
-  <!-- ================= CABEÇALHO ================= -->
+  <!-- ======= CABEÇALHO ======= -->
   <header class="gest-header">
-    <button class="hamburger" id="menuToggle" aria-label="Abrir menu" aria-controls="gestMenu" aria-expanded="false">
-      ☰
-    </button>
+    <button class="hamburger" id="menuToggle" aria-label="Abrir menu" aria-controls="gestMenu" aria-expanded="false">☰</button>
 
     <div class="gest-logo">
       <a href="index.html">
@@ -34,22 +27,19 @@
     </div>
   </header>
 
-  <!-- ================= MENU LATERAL ================= -->
+  <!-- ======= MENU LATERAL ======= -->
   <aside id="gestMenu" class="gest-menu">
     <img src="IMAGEM/logo_vision.png" alt="Logo Vision" class="gest-menu-logo" />
     <nav>
       <ul>
-        <li><a href="paginaGestor.html" class="active">Início</a></li>
-        <li><a href="#">Relatórios</a></li>
-        <li><a href="#">Gestão de Usuários</a></li>
-        <li><a href="#">Configurações</a></li>
+        <li><a href="paginaGestor.html" class="active">Início</a></li>      
       </ul>
     </nav>
   </aside>
 
-  <!-- ================= CONTEÚDO ================= -->
+  <!-- ======= CONTEÚDO ======= -->
   <main class="gest-content">
-    <!-- ======== DADOS PESSOAIS ======== -->
+    <!-- DADOS PESSOAIS -->
     <section class="gest-dados">
       <img src="IMAGEM/foto-gestora.jpg" alt="Foto da gestora" class="gest-foto" />
       <div class="gest-info">
@@ -61,19 +51,18 @@
       </div>
     </section>
 
-    <!-- ======== GRÁFICO DE RESULTADOS ======== -->
+    <!-- GRÁFICO -->
     <section class="gest-grafico">
       <h2 class="titulo-dados">Nossos Resultados</h2>
-      <div class="grafico-ficticio">
+      <div class="gest-grafico-fixo">
         <img src="IMAGEM/BPO-TDB (1).png" alt="Gráfico de resultados" />
       </div>
     </section>
   </main>
 
-  <!-- ================= SCRIPTS ================= -->
   <script src="javascript/script.js"></script>
 
-  <!-- ================= VLibras ================= -->
+  <!-- ======= VLibras ======= -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
