@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Painel do Gestor - Turma do Bem</title>
 
+  <!-- CSS PRINCIPAL -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- FONTES -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ÍCONE -->
   <link rel="icon" href="IMAGEM/LOGOTDB.png" type="image/png" />
 </head>
 
@@ -35,12 +40,16 @@
     <nav>
       <ul>
         <li><a href="paginaGestor.html" class="active">Início</a></li>
+        <li><a href="#">Relatórios</a></li>
+        <li><a href="#">Gestão de Usuários</a></li>
+        <li><a href="#">Configurações</a></li>
       </ul>
     </nav>
   </aside>
 
   <!-- ================= CONTEÚDO ================= -->
   <main class="gest-content">
+    <!-- ======== DADOS PESSOAIS ======== -->
     <section class="gest-dados">
       <img src="IMAGEM/foto-gestora.jpg" alt="Foto da gestora" class="gest-foto" />
       <div class="gest-info">
@@ -52,6 +61,7 @@
       </div>
     </section>
 
+    <!-- ======== GRÁFICO DE RESULTADOS ======== -->
     <section class="gest-grafico">
       <h2 class="titulo-dados">Nossos Resultados</h2>
       <div class="grafico-ficticio">
@@ -60,9 +70,10 @@
     </section>
   </main>
 
+  <!-- ================= SCRIPTS ================= -->
   <script src="javascript/script.js"></script>
 
-  <!-- VLibras -->
+  <!-- ================= VLibras ================= -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
