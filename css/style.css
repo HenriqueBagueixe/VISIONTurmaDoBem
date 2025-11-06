@@ -170,7 +170,6 @@ body {
   font-weight: 700;
   font-size: 18px;
   cursor: pointer;
-  transition: 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
@@ -184,7 +183,6 @@ body {
   font-weight: 700;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
@@ -198,7 +196,6 @@ body {
   font-weight: 700;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
@@ -206,6 +203,31 @@ body {
 .btn-laranja:hover {
   background-color: #ffd28a;
   color: #333;
+}
+
+/* Efeitos */
+.btn-fazer-parte,
+.clique-aqui,
+.btn-rodape {
+  transition: all 0.3s ease;
+  display: inline-block; /* importante pra o transform funcionar em <a> */
+}
+
+/* Efeito de movimento e destaque no hover */
+.btn-fazer-parte:hover,
+.clique-aqui:hover,
+.btn-rodape:hover {
+  transform: translateY(-4px); /* sobe levemente */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  background-color: #ff9b00; /* tom mais claro */
+  color: #fff; /* garante contraste */
+}
+
+/* Efeito de clique */
+.btn-fazer-parte:active,
+.clique-aqui:active,
+.btn-rodape:active {
+  transform: scale(0.97); /* pequena compressão */
 }
 
 /* =======================================================
