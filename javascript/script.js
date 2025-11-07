@@ -167,13 +167,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ====== BOTÃO CONFIRMAR CADASTRO =======//
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector('form.form');
   const botaoConfirmar = document.getElementById("btnConfirmar");
-
-  if (botaoConfirmar) {
-    botaoConfirmar.addEventListener("click", function (event) {
-      event.preventDefault(); 
-      alert("Cadastro realizado com sucesso, entraremos em contato!");
+  if (form && botaoConfirmar) {
+    botaoConfirmar.addEventListener("click", (e) => {
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        form.reportValidity(); // mostra “Preencha este campo” 
+        return;
+      }
     });
   }
 });

@@ -1097,7 +1097,7 @@ label{
   font-weight:600
 }
 
-input[type="text"],input[type="email"],input[type="password"],input[type="date"]{
+input[type="text"],input[type="email"],input[type="password"],input[type="date"],input[type="number"]{
   border:2px solid #e4e4e4;
   border-radius:8px;
   padding:10px 12px;
