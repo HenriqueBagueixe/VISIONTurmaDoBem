@@ -82,7 +82,8 @@ VISIONTurmaDoBem/\
 ├── 📄 paginaCadastro.html\
 ├── 📄 paginaGestor.html\
 ├── 📄 paginaLogin.html\
-└── 📄 sobre.html\
+└── 📄 sobre.html
+└── 📄 README.md
 
 ## 🖼️ Imagens e Ícones do Projeto
 
