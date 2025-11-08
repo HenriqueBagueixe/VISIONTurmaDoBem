@@ -1,7 +1,13 @@
 # VISION – Turma do Bem
 
-Projeto desenvolvido para o **Challenge FIAP 2025**, com o objetivo de aplicar tecnologia, empatia e impacto social na ONG **Turma do Bem**.\
-A plataforma **VISION** visa otimizar o cadastro, atendimento e comunicação entre beneficiários, voluntários e administradores, tornando o processo mais ágil, acessível e humanizado.
+A **VISION** é uma plataforma web que moderniza o fluxo de atendimento da ONG Turma do Bem, permitindo que:
+- Beneficiários realizem o **cadastro via ChatBot**, por texto ou comando de voz;  
+- Dentistas voluntários possam **se cadastrar, enviar documentação e serem aprovados pelo sistema**;  
+- O sistema realize **agendamentos inteligentes**, aplicando regras de prioridade baseadas em **score, distância e disponibilidade**;  
+- Todos os usuários sejam **notificados automaticamente** sobre cadastros, aprovações e agendamentos.  
+
+Essa solução foi pensada para **reduzir processos manuais**, aumentar a **agilidade nos atendimentos** e garantir que mais pessoas recebam cuidado odontológico com dignidade e eficiência.\
+(Ainda estamos implementando todas as tecnologias pensadas.)
 
 ---
 
