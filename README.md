@@ -128,4 +128,4 @@ O site conta com imagens ilustrativas e reais dos beneficiários e voluntários:
 - ![Twitter](./imagem/logo-twitter.png)
   
 ## 🔗 Link do GitHub do Projeto
-👉 [Clique aqui para acessar ao repositório](https://github.com/SEU-USUARIO/VISIONTurmaDoBem)
+👉 [Clique aqui para acessar ao repositório](https://github.com/HenriqueBagueixe/VISIONTurmaDoBem)
